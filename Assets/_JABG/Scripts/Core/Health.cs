@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] Sprite[] boatSprites;
+    [Header("Life Parameter")]
     [Range(0,2f)]
     [SerializeField] float imunityTime=0;
     [SerializeField] int maxLife = 3;
-    private int currentLife;
-    private bool isImune =false;
-    private bool isDead = false;
-    [SerializeField] SpriteRenderer renderer;
+    [Header("Render")]
+    [SerializeField] private new SpriteRenderer renderer;
+    [SerializeField] Sprite[] boatSprites;
 
+    private int currentLife;
+    private bool isImune = false;
+    private bool isDead = false;
     private void Awake() {
         if(!renderer)
             renderer = GetComponent<SpriteRenderer>();
