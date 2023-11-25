@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class Health : MonoBehaviour
     [SerializeField] int maxLife = 3;
     [Header("Render")]
     [SerializeField] private new SpriteRenderer renderer;
-    [SerializeField] Sprite[] boatSprites;
+    [SerializeField] private Sprite[] boatSprites;
+    [SerializeField] private Slider healthHUD;
 
     private int currentLife;
     private bool isImune = false;
@@ -25,6 +27,8 @@ public class Health : MonoBehaviour
     {
         currentLife = maxLife;
         renderer.sprite = boatSprites[0];
+        UpdateHUD();
+        
     }
 
     public bool TakeDamage(int value) {
@@ -43,6 +47,7 @@ public class Health : MonoBehaviour
             renderer.sprite = boatSprites[1];
         }
         isImune = true;
+        UpdateHUD();
         Invoke("ResetImunity", imunityTime);
         return true;
     }
@@ -58,5 +63,12 @@ public class Health : MonoBehaviour
     }
     public bool IsDead() {
         return isDead;
+    }
+
+    private void UpdateHUD() {
+        if (!healthHUD)
+            return;
+        healthHUD.maxValue = maxLife;
+        healthHUD.value = ((float)currentLife); 
     }
 }
