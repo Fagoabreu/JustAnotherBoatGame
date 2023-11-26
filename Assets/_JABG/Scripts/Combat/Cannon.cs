@@ -16,7 +16,7 @@ public class Cannon : MonoBehaviour
 
     void Update()
     {
-        
+        Shoot();
     }
 
     public void Shoot() {
@@ -24,6 +24,8 @@ public class Cannon : MonoBehaviour
             return;
         if (lastShootTime + shootTime > Time.time)
             return;
-        PoolsManager.instance.cannonBallPool.GetObject(cannonSpawnTransform.position, cannonSpawnTransform.rotation);
+        GameObject cannonBall = PoolsManager.instance.cannonBallPool.GetObject(cannonSpawnTransform.position, cannonSpawnTransform.rotation);
+        cannonBall.tag = transform.tag;
+        lastShootTime = Time.time;
     }
 }

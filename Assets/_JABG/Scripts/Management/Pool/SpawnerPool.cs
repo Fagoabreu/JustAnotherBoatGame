@@ -39,7 +39,7 @@ public class SpawnerPool : MonoBehaviour
     }
 
     //retirar um objeto da lista para ser usável
-    public GameObject GetObject(Vector3 position, Quaternion rotation) {
+    public GameObject GetObject(Vector2 position, Quaternion rotation) {
         objectposition = position;
         objectrotation = rotation;
         return pool.Get();

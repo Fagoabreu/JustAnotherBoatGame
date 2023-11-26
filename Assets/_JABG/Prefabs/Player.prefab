@@ -85,7 +85,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   - {fileID: -113527012, guid: 3ecca4c8f1a973e4884b4517297f1c35, type: 3}
   - {fileID: 1879715832, guid: 3ecca4c8f1a973e4884b4517297f1c35, type: 3}
   - {fileID: 554703128, guid: 3ecca4c8f1a973e4884b4517297f1c35, type: 3}
+  healthHUD: {fileID: 0}
 --- !u!114 &5801388441639025810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ GameObject:
   - component: {fileID: 5359739497215780130}
   m_Layer: 0
   m_Name: Crew
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,7 +383,7 @@ GameObject:
   - component: {fileID: 8761567776067433058}
   m_Layer: 0
   m_Name: Boat
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,6 +475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannon
       objectReference: {fileID: 0}
+    - target: {fileID: 1577565343406593573, guid: 88a8f0e9cd4113e48bdff357f9f2c49f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7284752321271840142, guid: 88a8f0e9cd4113e48bdff357f9f2c49f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -514,6 +519,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 8081932756106315745, guid: 88a8f0e9cd4113e48bdff357f9f2c49f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -532,6 +541,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9052579569614663160}
     m_Modifications:
+    - target: {fileID: 1856441914968951143, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577060196851950293, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878878762912304453, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4781194084533403447, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.37900007
@@ -572,9 +593,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5048507486249726737, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771613580454124673, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998669813583645054, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998669813583645054, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 6721965623620843564, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
       propertyPath: m_Name
       value: SideCannons (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721965623620843564, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583895627763114700, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939364069528754339, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -594,6 +643,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9052579569614663160}
     m_Modifications:
+    - target: {fileID: 1856441914968951143, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577060196851950293, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878878762912304453, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4781194084533403447, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.34500003
@@ -634,9 +695,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4983386226139227886, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048507486249726737, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771613580454124673, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998669813583645054, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.087
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998669813583645054, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6721965623620843564, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
       propertyPath: m_Name
       value: SideCannons
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721965623620843564, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939364069528754339, guid: b30e8ecf88670f34fb27730768f2f290, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
